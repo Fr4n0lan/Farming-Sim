@@ -1,7 +1,7 @@
 extends State
-class_name ChickenIdle
+class_name CowIdle
 
-@export var chicken: CharacterBody2D
+@export var cow: CharacterBody2D
 
 var player : CharacterBody2D
 
@@ -24,10 +24,10 @@ func Update(delta: float):
 		randomize_wander()
 
 func Physics_Update(delta: float):
-	if chicken:
-		chicken.velocity = move_direction * chicken.IdleMoveSpeed
+	if cow:
+		cow.velocity = move_direction * cow.IdleMoveSpeed
 	
-	var direction = chicken.global_position - player.global_position
+	var direction = cow.global_position - player.global_position
 	
-	if direction.length() < chicken.IdleDistance:
+	if direction.length() < cow.IdleDistance:
 		Transitioned.emit(self, "flee")

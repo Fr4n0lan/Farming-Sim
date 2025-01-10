@@ -1,13 +1,13 @@
 extends CharacterBody2D
-class_name Chicken
+class_name Cow
 
 @onready var anim_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 @export var IdleDistance := 20
-@export var FleeDistance := 70
+@export var FleeDistance := 60
 
 @export var IdleMoveSpeed := 10
-@export var FleeMoveSpeed := 75
+@export var FleeMoveSpeed := 45
 
 func _physics_process(delta: float):
 	if velocity.length() > 0:
